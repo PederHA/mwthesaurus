@@ -15,7 +15,8 @@ def client():
 
 @pytest.fixture(scope="session")
 def sync_result(client):
-    return client.get("fat")
+    return client.get("fat") # "fat" has multiple definitions
+                             # thus we can test more cases
 
 
 @pytest.fixture(scope="session")

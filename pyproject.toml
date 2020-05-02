@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "mwthesaurus"
-version = "0.1.0"
+version = "0.1.1"
 description = "API Wrapper for the Merriam-Webster Collegiate Thesaurus API."
 readme="README.md"
 authors = ["Peder Hovdan Andresen"]
