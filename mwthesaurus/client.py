@@ -32,5 +32,8 @@ class MWClient:
         r = response.json()
         if not r:
             raise ValueError("API returned empty response. Verify that the word is spelled correctly.")
+        elif all(isinstance(i, str) for i in r):
+            suggestions = ", ".join([f"'{s}'" for s in r])
+            raise ValueError(f"Unable to find definition, did you mean: {suggestions}?")
         return r
 
